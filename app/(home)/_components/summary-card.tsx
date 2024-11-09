@@ -20,7 +20,18 @@ const SummaryCard = ({
       className={`${size === "large" || title === "Investido" ? "bg-white bg-opacity-5" : ""} `}
     >
       <CardHeader className="flex-row items-center gap-4">
-        {icon}
+        <div
+          className={`rounded-lg ${
+            title === "Receita"
+              ? "bg-green-800"
+              : title === "Despesas"
+                ? "bg-red-800"
+                : "bg-muted"
+          } bg-opacity-[3%] p-2`}
+        >
+          {icon}
+        </div>
+
         <p
           className={`${size === "small" ? "text-muted-foreground" : "text-white opacity-70"}`}
         >
